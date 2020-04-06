@@ -1,7 +1,6 @@
 package com.huseyink.issuemanagement.service;
 
 import com.huseyink.issuemanagement.dto.ProjectDto;
-import com.huseyink.issuemanagement.entity.Project;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -20,4 +19,8 @@ public interface ProjectService {
     Page<ProjectDto> getAllPageable(Pageable pageable);
 
     Boolean delete(ProjectDto project);
+
+    Boolean delete(Long id);
+
+    ProjectDto update(Long id, ProjectDto projectDto);
 }

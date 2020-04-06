@@ -21,4 +21,5 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
 
    List<Project> findAll(Sort sort);
 
+    Project getByProjectCode(String projectCode);
 }
